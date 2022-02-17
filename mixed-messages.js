@@ -44,6 +44,9 @@ let morningFortune;
 let afternoonFortune;
 let nightFortune;
 
+let morningLuckMessage;
+let afternoonLuckMessage;
+let nightLuckMessage;
 
 let numberPicked;
 
@@ -55,31 +58,47 @@ const fortunePicker = (fortune) => {
 
 if (morningLuck < 0.25){
     morningFortune = poorFortunes[fortunePicker(poorFortunes)]
+    morningLuckMessage = 'You have poor luck at this time.'
 } else if (morningLuck >= 0.25 && morningLuck < 0.75) {
     morningFortune = neutralFortunes[fortunePicker(neutralFortunes)];
+    morningLuckMessage = 'You have neutral luck at this time.'
 } else if (morningLuck >= 0.75) {
+    morningLuckMessage = 'You have good luck at this time.'
     morningFortune = goodFortunes[fortunePicker(goodFortunes)];
 }
 
 if (afternoonLuck < 0.25){
     afternoonFortune = poorFortunes[fortunePicker(poorFortunes)]
+    afternoonLuckMessage = 'You have poor luck at this time.'
 } else if (afternoonLuck >= 0.25 && afternoonLuck < 0.75) {
     afternoonFortune = neutralFortunes[fortunePicker(neutralFortunes)];
+    afternoonLuckMessage = 'You have neutral luck at this time.'
 } else if (afternoonLuck >= 0.75) {
     afternoonFortune = goodFortunes[fortunePicker(goodFortunes)];
+    afternoonLuckMessage = 'You have good luck at this time.'
 }
 
 if (nightLuck < 0.25){
     nightFortune = poorFortunes[fortunePicker(poorFortunes)]
+    nightLuckMessage = 'You have poor luck at this time.'
 } else if (nightLuck >= 0.25 && nightLuck < 0.75) {
     nightFortune = neutralFortunes[fortunePicker(neutralFortunes)];
+    nightLuckMessage = 'You have neutral luck at this time.'
 } else if (nightLuck >= 0.75) {
     nightFortune = goodFortunes[fortunePicker(goodFortunes)];
+    nightLuckMessage = 'You have good luck at this time.'
 }
 
+
+
 console.log('Your fortunes for today are as follows:');
-console.log(`Morning: ${morningFortune} You are ${(morningLuck*100).toFixed(0)}% lucky at this time.`);
-console.log(`Afternoon: ${afternoonFortune} You are ${(afternoonLuck*100).toFixed(0)}% lucky at this time.`);
-console.log(`Night: ${nightFortune} You are ${(nightLuck*100).toFixed(0)}% lucky at this time`);
+console.log(`Morning: ${morningFortune} You are ${(morningLuck*100).toFixed(0)}% lucky at this time. ${morningLuckMessage}`);
+console.log();
+console.log(`Afternoon: ${afternoonFortune} You are ${(afternoonLuck*100).toFixed(0)}% lucky at this time. ${afternoonLuckMessage}`);
+console.log();
+console.log(`Night: ${nightFortune} You are ${(nightLuck*100).toFixed(0)}% lucky at this time. ${nightLuckMessage}`);
+console.log();
+
+
 
 console.log(`Your average luck for the day is ${averageLuck}%.`);
