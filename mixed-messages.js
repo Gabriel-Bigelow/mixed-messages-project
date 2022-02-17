@@ -35,10 +35,10 @@ goodFortunes.push('The only impossible journey is the one you never begin.')
 goodFortunes.push('Believe and act as if it were impossible to fail.')
 goodFortunes.push('If you can imagine it, you can achieveit; if you can dream it, you can become it.')
 
-let morningLuck = Math.random().toFixed(2);
-let afternoonLuck = Math.random().toFixed(2);
-let nightLuck = Math.random().toFixed(2);
-let averageLuck = ((morningLuck + afternoonLuck + nightLuck) / 3).toFixed(2);
+let morningLuck = Math.random();
+let afternoonLuck = Math.random();
+let nightLuck = Math.random();
+let averageLuck = ((morningLuck + afternoonLuck + nightLuck) / 3 * 100).toFixed(2);
 
 let morningFortune;
 let afternoonFortune;
@@ -78,8 +78,8 @@ if (nightLuck < 0.25){
 }
 
 console.log('Your fortunes for today are as follows:');
-console.log(`Morning: ${morningFortune} You are ${morningLuck*100}% lucky at this time.`);
-console.log(`Afternoon: ${afternoonFortune} You are ${afternoonLuck*100}% lucky at this time.`);
-console.log(`Night: ${nightFortune} You are ${nightLuck*100}% lucky at this time`);
+console.log(`Morning: ${morningFortune} You are ${(morningLuck*100).toFixed(0)}% lucky at this time.`);
+console.log(`Afternoon: ${afternoonFortune} You are ${(afternoonLuck*100).toFixed(0)}% lucky at this time.`);
+console.log(`Night: ${nightFortune} You are ${(nightLuck*100).toFixed(0)}% lucky at this time`);
 
-console.log(`Your average luck for the day is ${averageLuck*100}%.`);
+console.log(`Your average luck for the day is ${averageLuck}%.`);
