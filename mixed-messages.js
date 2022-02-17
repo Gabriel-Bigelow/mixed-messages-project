@@ -35,3 +35,44 @@ goodFortunes.push('The only impossible journey is the one you never begin.')
 goodFortunes.push('Believe and act as if it were impossible to fail.')
 goodFortunes.push('If you can imagine it, you can achieveit; if you can dream it, you can become it.')
 
+let morningLuck = Math.random().toFixed(2);
+let afternoonLuck = Math.random().toFixed(2);
+let nightLuck = Math.random().toFixed(2);
+let averageLuck = ((morningLuck + afternoonLuck + nightLuck) / 3).toFixed(2);
+
+let morningFortune;
+let afternoonFortune;
+let nightFortune;
+
+
+let numberPicked;
+
+const fortunePicker = (fortune) => {
+    numberPicked = Math.floor(Math.random() * fortune.length);
+    return numberPicked;
+}
+
+
+if (morningLuck < 0.25){
+    morningFortune = poorFortunes[fortunePicker(poorFortunes)]
+} else if (morningLuck >= 0.25 && morningLuck < 0.75) {
+    morningFortune = neutralFortunes[fortunePicker(neutralFortunes)];
+} else if (morningLuck >= 0.75) {
+    morningFortune = goodFortunes[fortunePicker(goodFortunes)];
+}
+
+if (afternoonLuck < 0.25){
+    afternoonFortune = poorFortunes[fortunePicker(poorFortunes)]
+} else if (afternoonLuck >= 0.25 && afternoonLuck < 0.75) {
+    afternoonFortune = neutralFortunes[fortunePicker(neutralFortunes)];
+} else if (afternoonLuck >= 0.75) {
+    afternoonFortune = goodFortunes[fortunePicker(goodFortunes)];
+}
+
+if (nightLuck < 0.25){
+    nightFortune = poorFortunes[fortunePicker(poorFortunes)]
+} else if (nightLuck >= 0.25 && nightLuck < 0.75) {
+    nightFortune = neutralFortunes[fortunePicker(neutralFortunes)];
+} else if (nightLuck >= 0.75) {
+    nightFortune = goodFortunes[fortunePicker(goodFortunes)];
+}
