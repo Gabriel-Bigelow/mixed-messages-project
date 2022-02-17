@@ -57,44 +57,35 @@ const fortunePicker = (fortune) => {
 
 
 if (morningLuck < 0.25){
-    morningFortune = poorFortunes[fortunePicker(poorFortunes)]
-    poorFortunes.splice(numberPicked, 1);
+    morningFortune = poorFortunes.splice(fortunePicker(poorFortunes), 1);
     morningLuckMessage = 'You have poor luck at this time.'
 } else if (morningLuck >= 0.25 && morningLuck < 0.75) {
-    morningFortune = neutralFortunes[fortunePicker(neutralFortunes)];
-    neutralFortunes.splice(numberPicked, 1);
+    morningFortune = neutralFortunes.splice(fortunePicker(neutralFortunes), 1);
     morningLuckMessage = 'You have neutral luck at this time.'
 } else if (morningLuck >= 0.75) {
-    morningFortune = goodFortunes[fortunePicker(goodFortunes)];
-    goodFortunes.splice(numberPicked, 1);
+    morningFortune = goodFortunes.splice(fortunePicker(goodFortunes), 1);
     morningLuckMessage = 'You have good luck at this time.'
 }
 
 if (afternoonLuck < 0.25){
-    afternoonFortune = poorFortunes[fortunePicker(poorFortunes)]
-    poorFortunes.splice(numberPicked, 1);
+    afternoonFortune = poorFortunes.splice(fortunePicker(poorFortunes), 1);
     afternoonLuckMessage = 'You have poor luck at this time.'
 } else if (afternoonLuck >= 0.25 && afternoonLuck < 0.75) {
-    afternoonFortune = neutralFortunes[fortunePicker(neutralFortunes)];
-    neutralFortunes.splice(numberPicked, 1);
+    afternoonFortune = neutralFortunes.splice(fortunePicker(neutralFortunes), 1);
     afternoonLuckMessage = 'You have neutral luck at this time.'
 } else if (afternoonLuck >= 0.75) {
-    afternoonFortune = goodFortunes[fortunePicker(goodFortunes)];
-    goodFortunes.splice(numberPicked, 1);
+    afternoonFortune = goodFortunes.splice(fortunePicker(goodFortunes), 1);
     afternoonLuckMessage = 'You have good luck at this time.'
 }
 
 if (nightLuck < 0.25){
-    nightFortune = poorFortunes[fortunePicker(poorFortunes)]
-    poorFortunes.splice(numberPicked, 1);
+    nightFortune = poorFortunes.splice(fortunePicker(poorFortunes), 1);
     nightLuckMessage = 'You have poor luck at this time.'
 } else if (nightLuck >= 0.25 && nightLuck < 0.75) {
-    nightFortune = neutralFortunes[fortunePicker(neutralFortunes)];
-    neutralFortunes.splice(numberPicked, 1);
+    nightFortune = neutralFortunes.splice(fortunePicker(neutralFortunes), 1);
     nightLuckMessage = 'You have neutral luck at this time.'
 } else if (nightLuck >= 0.75) {
-    nightFortune = goodFortunes[fortunePicker(goodFortunes)];
-    goodFortunes.splice(numberPicked, 1);
+    nightFortune = goodFortunes.splice(fortunePicker(goodFortunes), 1);
     nightLuckMessage = 'You have good luck at this time.'
 }
 
