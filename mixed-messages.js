@@ -58,34 +58,43 @@ const fortunePicker = (fortune) => {
 
 if (morningLuck < 0.25){
     morningFortune = poorFortunes[fortunePicker(poorFortunes)]
+    poorFortunes.splice(numberPicked, 1);
     morningLuckMessage = 'You have poor luck at this time.'
 } else if (morningLuck >= 0.25 && morningLuck < 0.75) {
     morningFortune = neutralFortunes[fortunePicker(neutralFortunes)];
+    neutralFortunes.splice(numberPicked, 1);
     morningLuckMessage = 'You have neutral luck at this time.'
 } else if (morningLuck >= 0.75) {
-    morningLuckMessage = 'You have good luck at this time.'
     morningFortune = goodFortunes[fortunePicker(goodFortunes)];
+    goodFortunes.splice(numberPicked, 1);
+    morningLuckMessage = 'You have good luck at this time.'
 }
 
 if (afternoonLuck < 0.25){
     afternoonFortune = poorFortunes[fortunePicker(poorFortunes)]
+    poorFortunes.splice(numberPicked, 1);
     afternoonLuckMessage = 'You have poor luck at this time.'
 } else if (afternoonLuck >= 0.25 && afternoonLuck < 0.75) {
     afternoonFortune = neutralFortunes[fortunePicker(neutralFortunes)];
+    neutralFortunes.splice(numberPicked, 1);
     afternoonLuckMessage = 'You have neutral luck at this time.'
 } else if (afternoonLuck >= 0.75) {
     afternoonFortune = goodFortunes[fortunePicker(goodFortunes)];
+    goodFortunes.splice(numberPicked, 1);
     afternoonLuckMessage = 'You have good luck at this time.'
 }
 
 if (nightLuck < 0.25){
     nightFortune = poorFortunes[fortunePicker(poorFortunes)]
+    poorFortunes.splice(numberPicked, 1);
     nightLuckMessage = 'You have poor luck at this time.'
 } else if (nightLuck >= 0.25 && nightLuck < 0.75) {
     nightFortune = neutralFortunes[fortunePicker(neutralFortunes)];
+    neutralFortunes.splice(numberPicked, 1);
     nightLuckMessage = 'You have neutral luck at this time.'
 } else if (nightLuck >= 0.75) {
     nightFortune = goodFortunes[fortunePicker(goodFortunes)];
+    goodFortunes.splice(numberPicked, 1);
     nightLuckMessage = 'You have good luck at this time.'
 }
 
@@ -99,6 +108,14 @@ console.log();
 console.log(`Night: ${nightFortune} You are ${(nightLuck*100).toFixed(0)}% lucky at this time. ${nightLuckMessage}`);
 console.log();
 
+let averageLuckMessage;
 
+if (averageLuck < 25){
+    averageLuckMessage = 'poor';
+} else if (averageLuck >= 25 && averageLuck < 75){
+    averageLuckMessage = 'neutral';
+} else if (averageLuck >= 75){
+    averageLuckMessage = 'good';
+}
 
-console.log(`Your average luck for the day is ${averageLuck}%.`);
+console.log(`Your average luck for the day is ${averageLuck}%. You have ${averageLuckMessage} luck today.`);
