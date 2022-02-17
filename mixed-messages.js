@@ -78,8 +78,8 @@ if (nightLuck < 0.25){
 }
 
 console.log('Your fortunes for today are as follows:');
-console.log(`Morning: ${morningFortune} You are ${morningLuck*100}% at this time.`);
-console.log(`Afternoon: ${afternoonFortune} You are ${afternoonLuck*100}% at this time.`);
+console.log(`Morning: ${morningFortune} You are ${morningLuck*100}% lucky at this time.`);
+console.log(`Afternoon: ${afternoonFortune} You are ${afternoonLuck*100}% lucky at this time.`);
 console.log(`Night: ${nightFortune} You are ${nightLuck*100}% lucky at this time`);
 
 console.log(`Your average luck for the day is ${averageLuck*100}%.`);
